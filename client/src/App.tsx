@@ -1,5 +1,13 @@
+/**
+ * CapiLoop — Horta Escultural: rotas institucionais em uma experiência contínua e orgânica.
+ */
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import Contact from "@/pages/Contact";
+import Faq from "@/pages/Faq";
+import ForBusinesses from "@/pages/ForBusinesses";
+import HowItWorks from "@/pages/HowItWorks";
+import Impact from "@/pages/Impact";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -11,6 +19,11 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/como-funciona"} component={HowItWorks} />
+      <Route path={"/para-estabelecimentos"} component={ForBusinesses} />
+      <Route path={"/impacto"} component={Impact} />
+      <Route path={"/faq"} component={Faq} />
+      <Route path={"/contato"} component={Contact} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
