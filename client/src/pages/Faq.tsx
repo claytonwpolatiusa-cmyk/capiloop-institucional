@@ -6,12 +6,12 @@ import { Link } from "wouter";
 import { PageHero, SiteFooter, SiteHeader } from "@/components/SiteChrome";
 
 const faqs = [
-  { question: "O que é a CapiLoop?", answer: "A CapiLoop é uma plataforma para descobrir lugares, benefícios e novas possibilidades perto de você. Ela aproxima pessoas de uma rede local de estabelecimentos parceiros." },
-  { question: "Como faço para acessar o app?", answer: "Use o botão “Quero baixar o app” e conte para a gente onde você está. O time Capi orienta os próximos passos para acesso à experiência na sua cidade." },
-  { question: "Quem pode participar como parceiro?", answer: "Estabelecimentos que desejam criar mais conexão com o público local podem iniciar uma conversa. Conte sobre seu negócio e sobre a experiência que você oferece." },
-  { question: "A parceria exige uma estrutura complicada?", answer: "A proposta é entrar no fluxo do seu negócio, não criar uma camada extra de complexidade. O formato é conversado de acordo com o contexto de cada estabelecimento." },
-  { question: "Em quais cidades a CapiLoop está disponível?", answer: "A disponibilidade depende da expansão da rede. Pelo contato, você pode indicar a sua cidade e receber novidades sobre novos loops." },
-  { question: "Como posso falar com o time?", answer: "Na página de contato, escolha se você quer acessar o app, cadastrar um estabelecimento ou conversar sobre a CapiLoop. A mensagem vai direto para o time responsável." },
+  { question: "O que é uma sacola surpresa?", answer: "É uma seleção de alimentos do dia, preparada pelo estabelecimento de acordo com a disponibilidade real. Os itens podem variar, mas você sempre vê preço, local e janela de retirada antes de reservar." },
+  { question: "Como funciona a retirada?", answer: "Depois de reservar e pagar pelo app, você escolhe um horário dentro da janela disponível. No local, apresenta o código do pedido para que o parceiro confirme a retirada." },
+  { question: "Posso escolher todos os itens da sacola?", answer: "Não. A surpresa é parte da experiência e permite que cada parceiro monte a sacola com os alimentos disponíveis naquele dia. A compra é informada de forma clara antes da confirmação." },
+  { question: "Quais estabelecimentos podem vender sacolas?", answer: "Padarias, cafés, restaurantes, confeitarias, mercados e outros negócios com disponibilidade variável de alimentos próprios para consumo podem iniciar o cadastro como parceiros." },
+  { question: "A CapiLoop é delivery?", answer: "Não. As sacolas são sempre retiradas presencialmente no estabelecimento, dentro da janela de horário definida pelo parceiro." },
+  { question: "Como posso falar com o time?", answer: "Na página de contato, escolha se quer encontrar sacolas, vender sacolas no seu estabelecimento ou conversar sobre outra necessidade. A mensagem é direcionada ao time responsável." },
 ];
 
 export default function Faq() {
@@ -22,14 +22,14 @@ export default function Faq() {
         <PageHero
           index="04"
           eyebrow="FAQ"
-          title={<>Dúvidas também<br /><em>fazem parte da rota.</em></>}
-          description="Reunimos aqui as perguntas que ajudam você a entender a CapiLoop antes de dar a primeira volta."
+          title={<>Tudo claro antes<br />da <em>boa surpresa.</em></>}
+          description="Aqui você entende como funcionam as sacolas surpresa, a reserva, a retirada no local e a experiência para parceiros."
           guideVariant="guide-faq"
         />
         <section className="section faq-layout">
           <aside className="faq-aside">
             <div className="faq-orb"><MessageCircleQuestion size={39} strokeWidth={1.35} /></div>
-            <h2>Quer uma resposta<br /><em>mais sua?</em></h2>
+            <h2>Quer uma resposta<br /><em>mais específica?</em></h2>
             <p>Se a sua pergunta não aparece aqui, o time Capi está a uma mensagem de distância.</p>
             <Link href="/contato" className="text-action text-action-ink">Ir para contato <ArrowRight size={16} aria-hidden="true" /></Link>
           </aside>

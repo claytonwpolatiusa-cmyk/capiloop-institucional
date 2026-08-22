@@ -9,20 +9,20 @@ const steps = [
   {
     number: "01",
     icon: MapPinned,
-    title: "Encontre um ponto no seu caminho",
-    text: "Abra a CapiLoop, escolha onde passar e descubra os estabelecimentos que fazem parte da sua rota.",
+    title: "Descubra uma sacola surpresa",
+    text: "Veja opções próximas, compare preço, disponibilidade e janela de retirada de padarias, cafés, mercados e restaurantes.",
   },
   {
     number: "02",
     icon: ShoppingBag,
-    title: "Faça uma escolha que volta para você",
-    text: "Ao circular pela rede, você encontra benefícios pensados para transformar pequenas escolhas em experiências melhores.",
+    title: "Reserve e pague pelo app",
+    text: "Escolha a sacola disponível, confirme a reserva e selecione o horário que funciona para a sua retirada.",
   },
   {
     number: "03",
     icon: Sparkles,
-    title: "Continue o loop",
-    text: "Aproveite a jornada, compartilhe novos lugares e siga conectando o que acontece no bairro com o seu dia.",
+    title: "Retire no local e aproveite",
+    text: "Apresente o código do pedido na janela escolhida. A sacola é surpresa, mas a experiência é simples e transparente.",
   },
 ];
 
@@ -34,15 +34,15 @@ export default function HowItWorks() {
         <PageHero
           index="01"
           eyebrow="Como funciona"
-          title={<>Uma volta boa<br /><em>muda o dia todo.</em></>}
-          description="A CapiLoop organiza pequenas descobertas para você circular, encontrar e aproveitar o que existe perto — no seu ritmo."
+          title={<>Descubra.<br /><em>Reserve. Retire.</em></>}
+          description="A CapiLoop transforma alimentos do dia em sacolas surpresa. Você encontra uma boa oportunidade perto, reserva pelo app e retira direto no estabelecimento."
           guideVariant="guide-steps"
         />
 
         <section className="section section-route">
           <div className="route-header">
-            <p className="eyebrow">Simples por natureza</p>
-            <h2>Três movimentos.<br />Um <em>loop</em> inteiro.</h2>
+            <p className="eyebrow">Simples desde a primeira sacola</p>
+            <h2>Três passos.<br />Uma boa <em>surpresa.</em></h2>
           </div>
           <div className="steps-journey">
             <div className="journey-line" aria-hidden="true"><span /><span /><span /></div>
@@ -62,10 +62,10 @@ export default function HowItWorks() {
 
         <section className="section app-glimpse-section">
           <div className="glimpse-copy">
-            <p className="eyebrow">Feito para acompanhar</p>
-            <h2>Um app que mostra<br />o que <em>vale a pena</em><br />pelo caminho.</h2>
-            <p>A experiência é direta: menos procura, mais presença. A CapiLoop conecta você aos lugares que deixam a cidade mais viva.</p>
-            <Link href="/contato?assunto=acesso-app" className="text-action text-action-ink">Quero receber o acesso ao app <ArrowRight size={16} aria-hidden="true" /></Link>
+            <p className="eyebrow">Tudo que você precisa saber, antes de reservar</p>
+            <h2>Surpresa no sabor.<br /><em>Clareza</em> na compra.</h2>
+            <p>Antes de confirmar, você vê o estabelecimento, o valor, a disponibilidade e a janela de retirada. Depois, basta chegar no horário e apresentar seu código.</p>
+            <Link href="/contato?assunto=acesso-app" className="text-action text-action-ink">Quero encontrar sacolas <ArrowRight size={16} aria-hidden="true" /></Link>
           </div>
           <div className="phone-scene" aria-label="Representação conceitual da tela do aplicativo CapiLoop">
             <div className="phone-shadow" aria-hidden="true" />
@@ -77,13 +77,13 @@ export default function HowItWorks() {
                 <div className="phone-map-dot dot-three" />
                 <div className="phone-route" />
                 <div className="phone-top"><span>Bom dia, Marina</span><span className="phone-avatar">C</span></div>
-                <div className="phone-card"><BadgeCheck size={19} /><div><strong>Tem loop perto</strong><small>Escolhas que rendem mais</small></div></div>
-                <div className="phone-bottom"><span>Descobrir</span><span>Rotas</span><span>Perfil</span></div>
+                <div className="phone-card"><BadgeCheck size={19} /><div><strong>Tem sacola perto</strong><small>Retirada hoje até 18h</small></div></div>
+                <div className="phone-bottom"><span>Descobrir</span><span>Pedidos</span><span>Perfil</span></div>
               </div>
             </div>
           </div>
         </section>
-        <CtaBand title="Comece pelo seu caminho." body="Diga para a Capi qual cidade e que tipo de descoberta você quer encontrar." />
+        <CtaBand title="Uma boa surpresa pode estar logo ali." body="Encontre as sacolas disponíveis perto de você e dê uma nova chance aos alimentos do dia." />
       </main>
       <SiteFooter />
     </div>

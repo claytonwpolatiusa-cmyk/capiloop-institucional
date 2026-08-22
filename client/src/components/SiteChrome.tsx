@@ -6,6 +6,7 @@ import { useState, type ReactNode } from "react";
 import { Link, useLocation } from "wouter";
 
 const logoUrl = "/manus-storage/capiloop-symbol_4510fc36.png";
+const guideCapybaraUrl = "/manus-storage/capiloop-hero-capybara_c3d14477.png";
 
 const navItems = [
   { href: "/", label: "Início" },
@@ -31,7 +32,7 @@ export function CapiGuide({ className = "", label = "CapiLoop em rota" }: { clas
   return (
     <div className={`capi-guide ${className}`} aria-label={label}>
       <span className="capi-guide-route" aria-hidden="true" />
-      <img src={logoUrl} alt="" />
+      <img src={guideCapybaraUrl} alt="" />
       <span className="capi-guide-spark" aria-hidden="true" />
     </div>
   );
@@ -56,7 +57,7 @@ export function SiteHeader() {
           })}
         </nav>
         <Link href="/contato?assunto=parcerias" className="partner-nav-cta">
-          Seja parceiro <ArrowUpRight size={15} aria-hidden="true" />
+          Vender sacolas <ArrowUpRight size={15} aria-hidden="true" />
         </Link>
         <button
           type="button"
@@ -71,14 +72,14 @@ export function SiteHeader() {
       </div>
       <div id="mobile-navigation" className={open ? "mobile-nav mobile-nav-open" : "mobile-nav"}>
         <div className="mobile-nav-panel">
-          <p className="eyebrow">A sua rota começa aqui</p>
+          <p className="eyebrow">Boas surpresas. Menos desperdício.</p>
           {navItems.map((item) => (
             <Link key={item.href} href={item.href} className="mobile-nav-link" onClick={() => setOpen(false)}>
               {item.label}<ArrowUpRight size={18} aria-hidden="true" />
             </Link>
           ))}
           <Link href="/contato?assunto=parcerias" className="button button-lime button-full" onClick={() => setOpen(false)}>
-            Cadastrar meu estabelecimento
+            Quero vender sacolas
           </Link>
         </div>
       </div>
@@ -93,28 +94,28 @@ export function SiteFooter() {
       <div className="footer-main">
         <div className="footer-intro">
           <BrandLockup light />
-          <p>Mais leve para quem circula. Mais próximo para quem empreende.</p>
+          <p>Boas surpresas para você. Novas oportunidades para bons alimentos do dia.</p>
           <Link href="/contato?assunto=acesso-app" className="button button-lime footer-download">
-            Quero conhecer o app <ArrowUpRight size={17} aria-hidden="true" />
+            Encontrar sacolas <ArrowUpRight size={17} aria-hidden="true" />
           </Link>
         </div>
         <div className="footer-links" aria-label="Links do rodapé">
           <div>
-            <p className="footer-label">Explorar</p>
-            <Link href="/como-funciona">Como funciona</Link>
-            <Link href="/impacto">Nosso impacto</Link>
+            <p className="footer-label">Descobrir</p>
+            <Link href="/como-funciona">Como resgatar</Link>
+            <Link href="/impacto">Por que importa</Link>
             <Link href="/faq">Dúvidas frequentes</Link>
           </div>
           <div>
-            <p className="footer-label">Crescer junto</p>
-            <Link href="/para-estabelecimentos">Para estabelecimentos</Link>
-            <Link href="/contato?assunto=parcerias">Quero ser parceiro</Link>
+            <p className="footer-label">Para parceiros</p>
+            <Link href="/para-estabelecimentos">Vender sacolas</Link>
+            <Link href="/contato?assunto=parcerias">Cadastrar estabelecimento</Link>
             <Link href="/contato">Falar com a Capi</Link>
           </div>
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} CapiLoop. Feito para deixar o caminho mais leve.</span>
+        <span>© {new Date().getFullYear()} CapiLoop. Boas surpresas. Menos desperdício.</span>
         <span>Brasil</span>
       </div>
     </footer>
@@ -135,7 +136,7 @@ export function PageHero({
   guideVariant?: string;
 }) {
   return (
-    <section className="page-hero">
+    <section className={`page-hero page-hero-${guideVariant}`}>
       <div className="page-hero-orbit orbit-one" aria-hidden="true" />
       <div className="page-hero-orbit orbit-two" aria-hidden="true" />
       <div className="page-hero-index" aria-hidden="true">{index}</div>
@@ -153,9 +154,9 @@ export function CtaBand({
   title,
   body,
   primaryHref = "/contato?assunto=acesso-app",
-  primaryLabel = "Quero baixar o app",
+  primaryLabel = "Encontrar sacolas",
   secondaryHref = "/contato?assunto=parcerias",
-  secondaryLabel = "Cadastrar estabelecimento",
+  secondaryLabel = "Quero vender sacolas",
 }: {
   title: string;
   body: string;
@@ -169,7 +170,7 @@ export function CtaBand({
       <div className="cta-band-orbit" aria-hidden="true" />
       <CapiGuide className="cta-guide" />
       <div>
-        <p className="eyebrow eyebrow-dark">A próxima volta é sua</p>
+        <p className="eyebrow eyebrow-dark">Boas oportunidades por perto</p>
         <h2>{title}</h2>
       </div>
       <div className="cta-band-actions">

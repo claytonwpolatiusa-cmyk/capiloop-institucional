@@ -8,9 +8,9 @@ import { CtaBand, PageHero, SiteFooter, SiteHeader } from "@/components/SiteChro
 const partnerVisual = "/manus-storage/capiloop-partners-3d_d22bb6f8.png";
 
 const benefits = [
-  { icon: UsersRound, title: "Presença no bairro", text: "Sua marca aparece para pessoas que já estão descobrindo novas rotas e decisões perto de você." },
-  { icon: CircleDollarSign, title: "Benefícios com contexto", text: "Crie incentivos que façam sentido para o seu ritmo, sua margem e o relacionamento que você quer construir." },
-  { icon: ChartNoAxesCombined, title: "Leitura mais humana", text: "Acompanhe o que desperta interesse e use esses sinais para testar novas ideias para o seu negócio." },
+  { icon: CircleDollarSign, title: "Receita de uma disponibilidade real", text: "Transforme alimentos do dia que não entraram no ritmo normal de vendas em uma nova oportunidade comercial." },
+  { icon: UsersRound, title: "Novos clientes do bairro", text: "Apareça para pessoas que estão procurando uma boa sacola perto de casa, do trabalho ou da faculdade." },
+  { icon: ChartNoAxesCombined, title: "Operação simples e controlada", text: "Publique quantidade, preço e janela de retirada. Acompanhe reservas e confirme entregas por código." },
 ];
 
 export default function ForBusinesses() {
@@ -21,8 +21,8 @@ export default function ForBusinesses() {
         <PageHero
           index="02"
           eyebrow="Para estabelecimentos"
-          title={<>Seu balcão pode<br />virar <em>ponto de encontro.</em></>}
-          description="A CapiLoop aproxima sua marca das pessoas certas, na hora em que elas estão escolhendo por onde passar."
+          title={<>O alimento do dia<br />pode ganhar <em>uma nova saída.</em></>}
+          description="A CapiLoop ajuda padarias, cafés, restaurantes, confeitarias e mercados a transformar uma disponibilidade variável em receita, descoberta e menos desperdício."
           guideVariant="guide-business"
         />
 
@@ -32,17 +32,17 @@ export default function ForBusinesses() {
             <img src={partnerVisual} alt="Miniatura 3D de um estabelecimento parceiro CapiLoop" />
           </div>
           <div className="partner-intro-copy">
-            <p className="eyebrow">De porta aberta para a cidade</p>
-            <h2>Mais descobertas.<br /><em>Mais vínculo.</em></h2>
-            <p>Você oferece uma experiência real. A CapiLoop ajuda essa experiência a encontrar pessoas abertas a voltar, recomendar e fazer parte do movimento local.</p>
-            <Link href="/contato?assunto=parcerias" className="button button-ink">Quero conversar sobre parceria <ArrowRight size={17} aria-hidden="true" /></Link>
+            <p className="eyebrow">Uma saída melhor para bons alimentos</p>
+            <h2>O que ainda está bom<br />pode continuar <em>circulando.</em></h2>
+            <p>Você monta sacolas surpresa de acordo com o que está disponível, define uma janela de retirada e alcança pessoas dispostas a descobrir seu estabelecimento.</p>
+            <Link href="/contato?assunto=parcerias" className="button button-ink">Quero vender sacolas <ArrowRight size={17} aria-hidden="true" /></Link>
           </div>
         </section>
 
         <section className="section benefits-section">
           <div className="benefits-header">
-            <p className="eyebrow">Uma parceria que circula</p>
-            <h2>Chegue perto sem<br />deixar de ser <em>você.</em></h2>
+            <p className="eyebrow">Uma operação que acompanha o seu ritmo</p>
+            <h2>Você decide a sacola.<br />A CapiLoop faz <em>ela chegar.</em></h2>
           </div>
           <div className="benefits-list">
             {benefits.map((benefit, index) => {
@@ -60,11 +60,11 @@ export default function ForBusinesses() {
 
         <section className="quote-panel">
           <p className="quote-mark">“</p>
-          <blockquote>Parceria boa não interrompe a rotina de um negócio. Ela <em>entra no fluxo</em> e encontra um jeito de somar.</blockquote>
+          <blockquote>O que não entrou no ritmo normal do dia ainda pode encontrar um <em>bom destino.</em></blockquote>
           <span>— Manifesto CapiLoop</span>
         </section>
 
-        <CtaBand title="Vamos fazer o seu lugar entrar no loop?" body="Conte um pouco sobre o seu estabelecimento. A conversa começa por aqui." primaryHref="/contato?assunto=parcerias" primaryLabel="Cadastrar meu estabelecimento" secondaryHref="/como-funciona" secondaryLabel="Entender como funciona" />
+        <CtaBand title="Vamos colocar as suas sacolas em circulação?" body="Conte um pouco sobre o seu estabelecimento. A conversa começa por aqui." primaryHref="/contato?assunto=parcerias" primaryLabel="Cadastrar estabelecimento" secondaryHref="/como-funciona" secondaryLabel="Entender a experiência" />
       </main>
       <SiteFooter />
     </div>

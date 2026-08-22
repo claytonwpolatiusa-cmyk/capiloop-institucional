@@ -8,9 +8,9 @@ import { CtaBand, PageHero, SiteFooter, SiteHeader } from "@/components/SiteChro
 const impactVisual = "/manus-storage/capiloop-impact-ecosystem_54a4dbe1.png";
 
 const pillars = [
-  { icon: Store, number: "A", title: "Economia de perto", text: "Quando mais pessoas descobrem o que existe ao redor, pequenos estabelecimentos ganham novas chances de fazer parte da rotina." },
-  { icon: HeartHandshake, number: "B", title: "Relações que retornam", text: "Uma recompensa pode ser só o começo: o loop existe para tornar a cidade mais convidativa para quem chega, fica e volta." },
-  { icon: Leaf, number: "C", title: "Caminhos conscientes", text: "Valorizar decisões locais é olhar com mais atenção para os percursos que já fazemos todos os dias." },
+  { icon: Leaf, number: "A", title: "Mais alimento aproveitado", text: "Sacolas surpresa criam uma oportunidade concreta para que alimentos próprios para consumo encontrem novos compradores." },
+  { icon: HeartHandshake, number: "B", title: "Economia mais acessível", text: "Pessoas encontram uma boa surpresa por um preço mais leve, sem abrir mão de qualidade percebida ou clareza na compra." },
+  { icon: Store, number: "C", title: "Valor que fica no bairro", text: "Estabelecimentos locais ganham um canal para converter parte da disponibilidade do dia em receita e descoberta." },
 ];
 
 export default function Impact() {
@@ -21,23 +21,23 @@ export default function Impact() {
         <PageHero
           index="03"
           eyebrow="Impacto"
-          title={<>A cidade melhora quando<br /><em>o valor circula.</em></>}
-          description="Para a CapiLoop, impacto é construir um jeito mais próximo de descobrir, escolher e voltar a frequentar o que faz sentido."
+          title={<>Mais aproveitamento.<br /><em>Menos desperdício.</em></>}
+          description="A CapiLoop conecta bons alimentos disponíveis no dia a pessoas que querem uma escolha mais acessível, prática e próxima."
           guideVariant="guide-impact"
         />
         <section className="section impact-visual-section">
           <div className="impact-visual-copy">
-            <p className="eyebrow">Cada volta importa</p>
-            <h2>O impacto cabe nas<br /><em>pequenas escolhas.</em></h2>
-            <p>Uma rota, um café, uma conversa no balcão. A CapiLoop desenha conexões para que esses encontros continuem acontecendo.</p>
+            <p className="eyebrow">Uma escolha prática, sem moralizar a rotina</p>
+            <h2>Quando uma sacola<br />encontra alguém, o alimento<br /><em>continua seu caminho.</em></h2>
+            <p>A CapiLoop não promete resolver o desperdício sozinha. Ela oferece uma ferramenta simples para que pessoas e negócios façam uma escolha melhor no dia a dia.</p>
           </div>
           <div className="impact-image-wrap"><img src={impactVisual} alt="Ecossistema 3D de rotas, lojas locais e pontos de encontro" /></div>
         </section>
 
         <section className="section pillar-section">
           <div className="pillar-aside">
-            <span className="round-stamp">feito<br />em<br />loop</span>
-            <p>Não existe impacto isolado. Tudo o que entra em circulação encontra alguém do outro lado.</p>
+            <span className="round-stamp">boa<br />comida<br />em loop</span>
+            <p>O impacto acontece quando o que ainda está bom encontra alguém pronto para aproveitar.</p>
           </div>
           <div className="pillars">
             {pillars.map((pillar) => {
@@ -55,10 +55,10 @@ export default function Impact() {
         </section>
 
         <section className="manifesto-strip">
-          <p>Menos distância entre <em>quem procura</em> e quem já está fazendo a cidade acontecer.</p>
-          <Link href="/para-estabelecimentos" className="text-action text-action-ink">Conhecer a rede de parceiros <ArrowRight size={16} aria-hidden="true" /></Link>
+          <p>Uma escolha gostosa para <em>quem compra</em>, uma nova oportunidade para quem prepara.</p>
+          <Link href="/para-estabelecimentos" className="text-action text-action-ink">Quero vender sacolas <ArrowRight size={16} aria-hidden="true" /></Link>
         </section>
-        <CtaBand title="Faça parte de um caminho que volta para todo mundo." body="Você pode entrar no loop como pessoa usuária ou como estabelecimento parceiro." />
+        <CtaBand title="Entre no loop de boas surpresas." body="Encontre uma sacola perto de você ou cadastre seu estabelecimento para publicar as do dia." />
       </main>
       <SiteFooter />
     </div>

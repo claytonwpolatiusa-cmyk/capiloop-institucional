@@ -1,16 +1,16 @@
 /**
  * CapiLoop — Horta Escultural: hero assimétrico, capivara 3D e percurso em verde-lima.
  */
-import { ArrowRight, ArrowUpRight, CircleCheck, MapPin, MoveUpRight, Store } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CircleCheck, MapPin, MoveUpRight, ShoppingBag, Store } from "lucide-react";
 import { Link } from "wouter";
 import { CtaBand, SiteFooter, SiteHeader } from "@/components/SiteChrome";
 
 const heroCapybara = "/manus-storage/capiloop-hero-capybara_c3d14477.png";
 
 const values = [
-  { icon: MapPin, kicker: "Descobrir", title: "O que combina com o seu caminho.", text: "Lugares, escolhas e novas possibilidades onde a cidade já acontece." },
-  { icon: Store, kicker: "Aproximar", title: "Quem faz o bairro ficar vivo.", text: "Estabelecimentos com histórias reais e portas abertas para você entrar." },
-  { icon: CircleCheck, kicker: "Voltar", title: "Para o que fez sentido hoje.", text: "Um loop que transforma boas experiências em vontade de seguir por perto." },
+  { icon: MapPin, kicker: "Descubra", title: "Sacolas surpresa perto de você.", text: "Padarias, cafés, restaurantes e mercados com bons alimentos disponíveis no dia." },
+  { icon: ShoppingBag, kicker: "Reserve", title: "Uma boa surpresa por um preço mais leve.", text: "Veja a disponibilidade, escolha o horário e garanta a sua sacola pelo app." },
+  { icon: CircleCheck, kicker: "Retire", title: "Passe no local e aproveite.", text: "A retirada é simples, presencial e acontece na janela definida por cada parceiro." },
 ];
 
 export default function Home() {
@@ -22,29 +22,29 @@ export default function Home() {
           <div className="hero-route hero-route-one" aria-hidden="true" />
           <div className="hero-route hero-route-two" aria-hidden="true" />
           <div className="hero-copy">
-            <p className="eyebrow hero-eyebrow"><span className="eyebrow-dot" />A cidade cabe no seu loop</p>
-            <h1>O caminho<br />fica <em>mais leve</em><br />quando <span>volta</span><br />para você.</h1>
-            <p className="hero-description">Descubra lugares, benefícios e conexões que deixam cada volta pela cidade mais gostosa de fazer.</p>
+            <p className="eyebrow hero-eyebrow"><span className="eyebrow-dot" />Sacolas surpresa perto de você</p>
+            <h1>Boas <em>surpresas.</em><br />Menos <span>desperdício.</span></h1>
+            <p className="hero-description">Descubra alimentos do dia em lugares que você gosta, reserve pelo app e retire no local por um preço mais leve.</p>
             <div className="hero-actions">
-              <Link href="/contato?assunto=acesso-app" className="button button-lime">Quero baixar o app <ArrowUpRight size={17} aria-hidden="true" /></Link>
-              <Link href="/como-funciona" className="text-action text-action-ink">Ver como funciona <ArrowRight size={16} aria-hidden="true" /></Link>
+              <Link href="/contato?assunto=acesso-app" className="button button-lime">Encontrar sacolas <ArrowUpRight size={17} aria-hidden="true" /></Link>
+              <Link href="/como-funciona" className="text-action text-action-ink">Como funciona <ArrowRight size={16} aria-hidden="true" /></Link>
             </div>
-            <div className="hero-mini-proof"><span className="proof-pip" /><span>Seu próximo ponto de encontro pode estar logo ali.</span></div>
+            <div className="hero-mini-proof"><span className="proof-pip" /><span>Reserve no app. Retire no local.</span></div>
           </div>
           <div className="hero-mascot-wrap">
-            <div className="hero-glass-tag tag-top"><span>Nova rota</span><span className="tag-pin"><MapPin size={14} /></span></div>
-            <div className="hero-glass-tag tag-bottom"><span className="tag-lime-dot" />perto de você</div>
+            <div className="hero-glass-tag tag-top"><span>Boa surpresa</span><span className="tag-pin"><ShoppingBag size={14} /></span></div>
+            <div className="hero-glass-tag tag-bottom"><span className="tag-lime-dot" />retirada no local</div>
             <div className="mascot-disc" aria-hidden="true" />
             <img className="hero-mascot" src={heroCapybara} alt="Capivara 3D da CapiLoop em uma rota verde-lima" />
           </div>
-          <div className="hero-meta"><span>brasil <i /> em movimento</span><span>deslize para descobrir ↓</span></div>
+          <div className="hero-meta"><span>alimentos do dia <i /> em circulação</span><span>deslize para descobrir ↓</span></div>
         </section>
 
         <section className="home-manifesto">
-          <p className="eyebrow">Feito para a cidade real</p>
+          <p className="eyebrow">Uma escolha simples para o dia a dia</p>
           <div className="manifesto-layout">
-            <h2>Um app que deixa<br />você <em>mais perto</em><br />do que importa.</h2>
-            <div className="manifesto-copy"><p>Na CapiLoop, cada escolha pelo caminho pode abrir uma nova possibilidade. Você encontra o que existe perto, apoia o que faz sentido e continua a volta com mais história para contar.</p><Link href="/impacto" className="text-action text-action-ink">Conhecer nosso impacto <ArrowRight size={16} aria-hidden="true" /></Link></div>
+            <h2>Boa comida merece<br />mais uma <em>volta.</em></h2>
+            <div className="manifesto-copy"><p>A CapiLoop aproxima alimentos que ainda estão bons para consumo de pessoas abertas a descobrir algo gostoso, perto de casa, do trabalho ou da faculdade.</p><Link href="/impacto" className="text-action text-action-ink">Entender o impacto <ArrowRight size={16} aria-hidden="true" /></Link></div>
           </div>
           <div className="home-values">
             {values.map((value, index) => {
@@ -56,11 +56,11 @@ export default function Home() {
 
         <section className="home-partner-bridge">
           <div className="bridge-orbit" aria-hidden="true" />
-          <div className="bridge-card bridge-card-one"><span className="bridge-card-kicker">Comércio local</span><strong>Mais perto<br />de quem passa.</strong><span className="bridge-card-line" /></div>
-          <div className="bridge-copy"><p className="eyebrow eyebrow-dark">Para estabelecimentos</p><h2>O seu lugar faz<br />a cidade <em>acontecer.</em></h2><p>A CapiLoop cria caminhos para novos encontros entre a sua marca e as pessoas que estão por perto.</p><Link href="/para-estabelecimentos" className="button button-ink">Conhecer as parcerias <MoveUpRight size={17} aria-hidden="true" /></Link></div>
-          <div className="bridge-card bridge-card-two"><span className="dot-cluster"><i /><i /><i /></span><strong>Encontros<br />em loop.</strong><span className="bridge-card-point" /></div>
+          <div className="bridge-card bridge-card-one"><span className="bridge-card-kicker">Para parceiros</span><strong>Bom alimento.<br />Boa saída.</strong><span className="bridge-card-line" /></div>
+          <div className="bridge-copy"><p className="eyebrow eyebrow-dark">Para estabelecimentos</p><h2>O alimento do dia<br />pode virar uma <em>boa oportunidade.</em></h2><p>Publique sacolas conforme a sua disponibilidade, gere receita adicional e apresente o seu negócio a novos clientes do bairro.</p><Link href="/para-estabelecimentos" className="button button-ink">Quero vender sacolas <MoveUpRight size={17} aria-hidden="true" /></Link></div>
+          <div className="bridge-card bridge-card-two"><span className="dot-cluster"><i /><i /><i /></span><strong>Alimento em<br />circulação.</strong><span className="bridge-card-point" /></div>
         </section>
-        <CtaBand title="A próxima volta pode começar agora." body="Entre no loop para descobrir o app ou trazer o seu estabelecimento para perto." />
+        <CtaBand title="A sua próxima boa surpresa pode estar por perto." body="Entre no loop para encontrar sacolas ou publicar as do seu estabelecimento." />
       </main>
       <SiteFooter />
     </div>
