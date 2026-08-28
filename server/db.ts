@@ -3,6 +3,7 @@
  */
 import { and, desc, eq, gt } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
+import { nanoid } from "nanoid";
 import { InsertPartnerLead, InsertUser, partnerLeads, surpriseBags, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
@@ -104,10 +105,16 @@ export async function listAvailableSurpriseBags() {
     .limit(6);
 }
 
-export async function createPartnerLead(lead: Omit<InsertPartnerLead, "id" | "status" | "createdAt" | "updatedAt">) {
+export async function createPartnerLead(lead: Omit<InsertPartnerLead, "id" | "status" | "referralCode" | "createdAt" | "updatedAt">) {
   const db = await getDb();
   if (!db) throw new Error("Banco de dados indisponível para receber o pré-cadastro.");
 
-  await db.insert(partnerLeads).values({ ...lead, status: "new" });
-  return { success: true } as const;
+  if (lead.referredByCode) {
+    const referrer = await db.select({ id: partnerLeads.id }).from(partnerLeads).where(eq(partnerLeads.referralCode, lead.referredByCode)).limit(1);
+    if (referrer.length === 0) throw new Error("O código de indicação informado não é válido.");
+  }
+
+  const referralCode = `CAPI-${nanoid(8).toUpperCase()}`;
+  await db.insert(partnerLeads).values({ ...lead, referralCode, status: "new" });
+  return { success: true, referralCode } as const;
 }

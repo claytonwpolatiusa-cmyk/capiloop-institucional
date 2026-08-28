@@ -1,5 +1,13 @@
 # Reposicionamento do site CapiLoop
 
+- [x] Adicionar uma área pública de atuação inicial da CapiLoop com Paraná e Santa Catarina.
+- [x] Oferecer seleção de cidade para parceiros manifestarem interesse de acordo com o estado atendido.
+- [x] Explicar os benefícios de adesão e o acompanhamento comercial sem prometer resultados financeiros garantidos.
+- [x] Implementar uma etapa de indicação após o pré-cadastro, com link de compartilhamento e registro de referência.
+- [x] Validar a experiência de cobertura, pré-cadastro e indicação em desktop e mobile.
+- [x] Validar visualmente o estado pós-pré-cadastro com código de indicação, compartilhamento e cópia de link em desktop e mobile.
+- [x] Criar uma visualização exclusiva de desenvolvimento para conferir o estado de indicação sem gravar pré-cadastros artificiais.
+- [x] Validar o recebimento de uma referência indicada pelo parâmetro de URL no pré-cadastro.
 - [ ] Conectar a vitrine à fonte operacional real de sacolas da plataforma ou importar registros reais aprovados.
 - [ ] Validar a vitrine da página inicial com pelo menos uma sacola real publicada, preservando estados de carregamento, erro e vazio.
 - [x] Criar fluxo de pré-cadastro de parceiros com validação, retorno de estado e armazenamento seguro de leads.

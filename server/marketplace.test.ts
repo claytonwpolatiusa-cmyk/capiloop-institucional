@@ -36,6 +36,7 @@ describe("marketplace e pré-cadastro de parceiros", () => {
       contactName: "Ana",
       email: "ana@cafecapi.com",
       phone: "11999999999",
+      state: "PR",
       city: "São Paulo",
       category: "Café",
       availabilityDescription: "Bolos e pães do dia.",
@@ -44,17 +45,20 @@ describe("marketplace e pré-cadastro de parceiros", () => {
   });
 
   it("persiste um pré-cadastro válido", async () => {
-    dbMocks.createPartnerLead.mockResolvedValue({ success: true });
+    dbMocks.createPartnerLead.mockResolvedValue({ success: true, referralCode: "CAPI-EXEMPLO" });
     const caller = appRouter.createCaller({} as never);
     await expect(caller.partnerLeads.submit({
       businessName: "Café Capi",
       contactName: "Ana",
       email: "ana@cafecapi.com",
       phone: "11999999999",
+      state: "SC",
       city: "São Paulo",
       category: "Café",
       availabilityDescription: "Bolos e pães do dia.",
+      referredByCode: "CAPI-REFER123",
       agreesToContact: true,
-    })).resolves.toEqual({ success: true });
+    })).resolves.toEqual({ success: true, referralCode: "CAPI-EXEMPLO" });
+    expect(dbMocks.createPartnerLead).toHaveBeenCalledWith(expect.objectContaining({ referredByCode: "CAPI-REFER123" }));
   });
 });
